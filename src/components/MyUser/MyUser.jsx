@@ -20,7 +20,7 @@ function MyUser() {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          `http://localhost:10000/api/users?page=${page}`
+          `https://usersapp-vhoy.onrender.com/api/users?page=${page}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch users");

@@ -33,7 +33,7 @@ const MyForm = () => {
     }
     console.log("Form data submitted:", formValues);
     try {
-      const response = await fetch('http://localhost:10000/api/user', {
+      const response = await fetch('https://usersapp-vhoy.onrender.com/api/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
