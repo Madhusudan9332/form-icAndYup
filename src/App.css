@@ -1,0 +1,11 @@
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+nav button {
+    border: gray 1px solid;
+    border-radius: 5px;
+    width: 40vw;
+    color: #000;
+}

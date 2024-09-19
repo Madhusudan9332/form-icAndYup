@@ -26,20 +26,26 @@ const MyForm = () => {
 
   // Function to handle form submission
   const onSubmit = async (values, { resetForm }) => {
+    const formValues ={
+      name: values.name,
+      email: values.email,
+      password: values.password,
+    }
+    console.log("Form data submitted:", formValues);
     try {
-      const response = await fetch('http://localhost:10000//api/user', {
+      const response = await fetch('http://localhost:10000/api/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(formValues),
       });
 
       if (!response.ok) {
         throw new Error('Failed to submit form');
       }
 
-      console.log("Form data submitted successfully:", values);
+      console.log("Form data submitted successfully:", formValues);
       resetForm(); // Reset form after successful submission
     } catch (error) {
       console.error("Error submitting form:", error);
